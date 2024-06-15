@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/layout.astro";
+//
+// if (Astro.request.method === 'POST') {
+//   const formData = await Astro.request.formData()
+//   //this prints the form data to the console
+//   console.log(formData)
+//   
+//   //FormData { [Symbol(state)]: [ { name: 'name', value: 'my project name' } ] }
+// }
+
+const email = Astro.url.searchParams.get('email') || '';
+
+---
+
+<Layout>
+  <main
+    class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border justify-center items-center gap-8 tracking-tight"
+  >
+		{email}
+  </main>
+</Layout>

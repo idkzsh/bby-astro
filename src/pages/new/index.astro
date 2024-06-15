@@ -1,17 +1,22 @@
 ---
 import Layout from "../../layouts/layout.astro";
 
+const depts: string[] = ['TV', 'Laptop']
 ---
 
 <Layout>
   <main
     class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border justify-center items-center gap-8 tracking-tight"
   >
-    <form action="" class="border rounded-md flex flex-col p-4 gap-4 shadow-md" id="new">
+    <form hx-get="/new/setup" hx-target="body" hx-swap="outerHTML transition:true" hx-push-url="true" class="border rounded-md flex flex-col p-4 gap-4 shadow-md" id="new">
         <label for="email">Email</label>
         <input name="email" type="email" class="border rounded-md p-1 w-80">
         <label for="department">Product Type</label>
-        <input name="department" type="text" class="border rounded-md p-1">
+        <select name="department" class="border rounded-md p-1">
+		{depts.map((item, index) => (
+			<option value={index}>{item}</option>
+		))}
+		</select>
         <label for="numOfSKUs"># of SKUs</label>
         <input name="numOfSKUs" type="number" class="border rounded-md p-1">
         <button type="submit" form="new" class="w-80 hover:opacity-80">Submit</button>
