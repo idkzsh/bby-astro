@@ -1,22 +1,18 @@
 ---
 import Layout from "../../layouts/layout.astro";
-//
-// if (Astro.request.method === 'POST') {
-//   const formData = await Astro.request.formData()
-//   //this prints the form data to the console
-//   console.log(formData)
-//   
-//   //FormData { [Symbol(state)]: [ { name: 'name', value: 'my project name' } ] }
-// }
+import TableHeaders from "../../components/TableHeaders.tsx"
+import {headers} from "../../data/setup.ts"
 
 const email = Astro.url.searchParams.get('email') || '';
+const dept = Astro.url.searchParams.get('department') || '';
+const numOfSKUs = Astro.url.searchParams.get('numOfSKUs') || '';
 
 ---
 
 <Layout>
   <main
-    class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border justify-center items-center gap-8 tracking-tight"
+    class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border gap-8 tracking-tight overflow-scroll"
   >
-		{email}
+	<TableHeaders list={headers}/>
   </main>
 </Layout>
