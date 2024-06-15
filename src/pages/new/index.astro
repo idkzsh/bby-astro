@@ -9,12 +9,13 @@ import Layout from "../../layouts/layout.astro";
   >
     <form action="" class="border rounded-md flex flex-col p-4 gap-4 shadow-md" id="new">
         <label for="email">Email</label>
-        <input name="email" type="email" class="border rounded-md p-1">
+        <input name="email" type="email" class="border rounded-md p-1 w-80">
         <label for="department">Product Type</label>
         <input name="department" type="text" class="border rounded-md p-1">
         <label for="numOfSKUs"># of SKUs</label>
         <input name="numOfSKUs" type="number" class="border rounded-md p-1">
+        <button type="submit" form="new" class="w-80 hover:opacity-80">Submit</button>
     </form>
-    <button type="submit" form="new">Submit</button>
+    
   </main>
 </Layout>
