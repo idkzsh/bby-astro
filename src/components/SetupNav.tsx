@@ -3,11 +3,7 @@ import { CiMail } from "react-icons/ci";
 import { RiLightbulbLine } from "react-icons/ri";
 import { IoHelp } from "react-icons/io5";
 
-interface Props {
-  url: string;
-}
-
-export default function Nav({ url }: Props) {
+export default function Nav() {
   return (
     <div className="w-48 h-screen bg-neutral-100 flex flex-col items-center pt-1 cursor-pointer">
       <div
@@ -30,6 +26,7 @@ export default function Nav({ url }: Props) {
           title="Contact"
         />
         <NavLink link="/faq/" icon={<IoHelp color="teal" />} title="FAQs" />
+        <NavLink link="/" icon={<IoHelp color="teal" />} title="Import" />
       </div>
     </div>
   );

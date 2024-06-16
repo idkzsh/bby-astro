@@ -1,10 +1,13 @@
 ---
 import Nav from "../components/Nav"
+import SetupNav from "../components/SetupNav.tsx"
 import "../global.css";
 
 const { title } = Astro.props;
----
 
+const url = Astro.url.pathname;
+console.log(url)
+---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 	<body class="flex bg-neutral-100 h-screen" id="body">
-		<Nav />
+	{url == "/new/setup" ? <SetupNav /> : <Nav />}
     <slot />
   </body>
 </html>
