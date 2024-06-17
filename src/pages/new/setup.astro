@@ -12,9 +12,9 @@ const numOfSKUs = Astro.url.searchParams.get('numOfSKUs') || '';
 
 <Layout>
   <main
-    class="flex w-[86.5%] h-[98%] bg-white mt-2 rounded-md border gap-8 tracking-tight overflow-scroll"
+    class="flex w-[86.5%] h-[98%] bg-white mt-2 rounded-md border tracking-tight overflow-scroll"
   >
 	<TableHeaders list={headers}/>
-	<TableInputs list={inputs} columns={numOfSKUs} />
+	<TableInputs data={inputs} columns={numOfSKUs} />
   </main>
 </Layout>
