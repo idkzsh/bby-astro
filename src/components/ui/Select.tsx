@@ -4,8 +4,6 @@ interface Props {
   list: string[];
 }
 
-console.log("Hello")
-
 export default function Select({ list }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
