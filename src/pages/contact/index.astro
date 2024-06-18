@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/layout.astro";
+import Select from "../../components/ui/Select.tsx"
+
+const list = ["Hello", "Goodbye"]
 
 ---
 
@@ -8,6 +11,6 @@ import Layout from "../../layouts/layout.astro";
 
     class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border justify-center items-center gap-8 tracking-tight"
   >
-        CONTACT!
+	<Select list={list}/>
   </main>
 </Layout>
