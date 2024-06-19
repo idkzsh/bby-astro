@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/layout.astro";
+import CustomSelect from "../../components/ui/CustomSelect.tsx"
+import {depts} from "../../data/setup.ts"
 
-const depts: string[] = ['TV', 'Laptop']
 ---
 
 <Layout>
@@ -12,12 +13,8 @@ const depts: string[] = ['TV', 'Laptop']
         <label for="email">Email</label>
         <input name="email" type="email" class="border rounded-md p-1 w-80">
         <label for="department">Product Type</label>
-        <select name="department" class="border rounded-md p-1">
-		{depts.map((item, index) => (
-			<option value={index}>{item}</option>
-		))}
-		</select>
-        <label for="numOfSKUs"># of SKUs</label>
+	<CustomSelect client:load list={depts} />
+	<label for="numOfSKUs"># of SKUs</label>
         <input name="numOfSKUs" type="number" class="border rounded-md p-1">
         <button type="submit" form="new" class="w-80 hover:opacity-80">Submit</button>
     </form>

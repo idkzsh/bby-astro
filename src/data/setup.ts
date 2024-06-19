@@ -1,3 +1,28 @@
+const depts = [
+  "Television",
+  "Tablet/iPad Softgood",
+  "Camcorder",
+  "Tablet/iPad Hardgood",
+  "PC & Mac Input/Output",
+  "Software",
+  "Desktop Computer",
+  "Printers",
+  "Monitors",
+  "PC & Mac Accessories",
+  "Drone Accessories",
+  "Headphones & Headsets",
+  "Connected Car Tech",
+  "Drones",
+  "Laptops",
+  "Musical Instruments",
+  "A/V Wall Mounts & Furniture",
+  "Microwaves",
+  "Telephones",
+  "General Audio",
+  "Digital Memory",
+  "Bar Fridges",
+]
+
 const headers = {
   "Vendor Part Number": "Maximum 20 characters",
   "SKU Title (Short)": "Maximum 20 characters",
@@ -396,4 +421,4 @@ const inputs = [
   },
 ];
 
-export { headers, inputs };
+export { headers, inputs, depts };
