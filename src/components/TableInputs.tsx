@@ -33,7 +33,7 @@ export default function TableInputs({ columns, data }: Props) {
           <>
             <input type="hidden" name="columns" value={columns} />
             <div className="w-40">
-              <div className="h-4 text-xs text-center font-bold border-b">
+              <div className="h-4 text-xs text-center font-bold border-b border-r">
                 SKU {index + 1}
               </div>
               {data.map((item) => (
