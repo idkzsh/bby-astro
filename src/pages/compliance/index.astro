@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/layout.astro";
+import CustomSelect from "../../components/ui/CustomSelect.tsx"
+
+const list = ["Hello", "Goodbye"]
+
+---
+
+<Layout>
+  <main
+
+    class="flex flex-col w-[86.5%] h-[98%] bg-white mt-2 rounded-md border justify-center items-center gap-8 tracking-tight"
+  >
+	<CustomSelect client:load list={list}/>
+  </main>
+</Layout>
