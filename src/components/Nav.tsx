@@ -18,18 +18,20 @@ export default function Nav({ url }: Props) {
       >
         <img src="/bby-logo.png" alt="" className="w-[50px]" />
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 justify-between h-full py-4">
         <NavLink
           link=" /new/"
           icon={<RiLightbulbLine color="teal" />}
           title="Create New SKUs"
         />
-        <NavLink
-          link="/contact/"
-          icon={<CiMail color="teal" />}
-          title="Contact"
-        />
-        <NavLink link="/faq/" icon={<IoHelp color="teal" />} title="FAQs" />
+        <div>
+          <NavLink
+            link="/contact/"
+            icon={<CiMail color="teal" />}
+            title="Contact"
+          />
+          <NavLink link="/faq/" icon={<IoHelp color="teal" />} title="FAQs" />
+        </div>
       </div>
     </div>
   );

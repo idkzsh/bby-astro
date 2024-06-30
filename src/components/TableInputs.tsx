@@ -27,7 +27,7 @@ const today = new Date().toISOString().split("T")[0];
 
 export default function TableInputs({ columns, data }: Props) {
   return (
-    <form className="flex" action="/compliance" method="POST">
+    <form className="flex" action="/compliance" method="POST" id="setupForm">
       {
         Array.from({ length: columns }).map((_, index) => (
           <>
