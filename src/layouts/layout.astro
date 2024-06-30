@@ -6,7 +6,12 @@ import "../global.css";
 const { title } = Astro.props;
 
 const url = Astro.url.pathname;
-console.log(url)
+
+
+switch (url) {
+	case "/new/setup" : console.log(`reached: ${url}`);
+}
+
 ---
 <html lang="en">
   <head>
