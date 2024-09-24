@@ -421,4 +421,6 @@ const inputs = [
   },
 ];
 
+console.log(typeof inputs)
+
 export { headers, inputs, depts };

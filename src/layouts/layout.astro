@@ -22,7 +22,7 @@ switch (url) {
     <title>{title}</title>
   </head>
 	<body class="flex bg-neutral-100 h-screen" id="body">
-	{url == "/new/setup" ? <SetupNav /> : <Nav />}
+	{url == "/new/setup" ? <SetupNav /> : <Nav url={url}/>}
     <slot />
   </body>
 </html>
